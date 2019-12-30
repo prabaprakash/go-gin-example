@@ -24,7 +24,7 @@ services:
         context: ./
         dockerfile: Dockerfile.backend-golang.binary
       ports:
-        - "81:3000"
+        - "80:3000"
       volumes:
         - .:/app
       links:
