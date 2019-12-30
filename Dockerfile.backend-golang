@@ -1,0 +1,8 @@
+FROM  golang:rc-alpine3.10
+COPY . ./app
+WORKDIR /app/backend-golang
+RUN apk update && apk add git alpine-sdk
+RUN go get github.com/gin-gonic/gin && \
+    go get go.mongodb.org/mongo-driver/mongo
+EXPOSE 3000
+CMD go build index.go && ./index

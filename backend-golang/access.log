@@ -1,0 +1,16 @@
+[GIN] 2019/12/23 - 21:45:04 | 200 |    228.3839ms |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:04 | 200 |    615.3991ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:07 | 304 |       994.3µs |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:07 | 200 |    101.2414ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:08 | 304 |      2.9906ms |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:08 | 200 |    102.1261ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:08 | 304 |      1.2424ms |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:08 | 200 |     71.8827ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:08 | 304 |       887.8µs |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 304 |       997.6µs |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 200 |     87.7675ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 304 |       997.2µs |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 200 |    503.9714ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 304 |      1.9954ms |             ::1 | GET      /feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 200 |     75.9282ms |             ::1 | GET      /db/feedbacks
+[GIN] 2019/12/23 - 21:45:09 | 200 |    448.3699ms |             ::1 | GET      /db/feedbacks

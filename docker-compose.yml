@@ -1,0 +1,43 @@
+
+version: '3'
+services:
+  minio:
+    container_name: minio
+    image: minio/minio:RELEASE.2019-12-19T22-52-26Z
+    volumes:
+      - data:/data
+    ports:
+      - "9000:80"
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data --address ":80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+  backend-golang:
+      container_name: backend-golang
+      restart: always
+      build:
+        context: ./
+        dockerfile: Dockerfile.backend-golang.binary
+      ports:
+        - "81:3000"
+      volumes:
+        - .:/app
+      links:
+        - mongo
+        - minio
+  mongo:
+      container_name: mongo
+      image: mongo:4.0.14-xenial
+      ports:
+        - "27017:27017"
+      volumes:
+        - /data/db:/mongodbdata
+  
+volumes:
+  data:
+  mongodbdata:

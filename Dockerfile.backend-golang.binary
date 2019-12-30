@@ -1,0 +1,5 @@
+FROM python:3.7.6-alpine3.10
+COPY . /app
+WORKDIR /app/backend-golang
+EXPOSE 3000
+CMD chmod -R 777 ./index && ./index
